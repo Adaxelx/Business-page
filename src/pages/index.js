@@ -1,9 +1,16 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import Image from '../components/image'
+import SEO from '../components/seo'
+
+const StyledButton = styled.button`
+  height: 100px;
+  width: 40px;
+  background-color: cadetblue;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +20,7 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
+      <StyledButton>123</StyledButton>
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
