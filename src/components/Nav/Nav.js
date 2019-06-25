@@ -19,6 +19,7 @@ const StyledNav = styled.nav`
 const StyledLink = styled(Link)`
   color: white;
   font-size: 1rem;
+  text-decoration: none;
 `
 
 const Nav = () => (

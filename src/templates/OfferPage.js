@@ -4,40 +4,40 @@ import styled from 'styled-components'
 import H2 from '../components/headers/H2'
 
 import search from '../images/search.png'
+import laptop from '../images/laptop.png'
 
 const StyledOfferPage = styled.div`
   width: 100%;
 
-  padding: 40px 0;
+  padding: 40px 5px;
 
-  background-color: #f2ba2b;
+  background-color: rgb(243, 186, 12);
 
   text-align: center;
   z-index: 100;
 `
 
-const StyledSearch = styled.div`
+const StyledImg = styled.img`
   width: 200px;
   height: 200px;
 
   margin: 0 auto;
 
-  background: url(${search}) no-repeat center center;
-  background-size: cover;
+  display: inline-block;
 `
 
 const OfferPage = () => (
   <StyledOfferPage>
     <H2>Offer</H2>
-    <StyledSearch />
+    <StyledImg src={search} />
     <h3>Develop Websites</h3>
     <p>
       Magna consectetur id ex velit ullamco reprehenderit id amet ut cillum. Exercitation
       consectetur nisi dolor voluptate eu do labore cupidatat ipsum voluptate occaecat adipisicing
       eu.
     </p>
-    <StyledSearch />
-    <h3>Develop Websites</h3>
+    <StyledImg src={laptop} />
+    <h3>Killing monsters</h3>
     <p>
       Magna consectetur id ex velit ullamco reprehenderit id amet ut cillum. Exercitation
       consectetur nisi dolor voluptate eu do labore cupidatat ipsum voluptate occaecat adipisicing
