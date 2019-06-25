@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import H2 from '../components/headers/H2'
 import logo from '../images/logo.png'
 
-const StyledAboutPage = styled.div`
+const StyledAboutPage = styled.article`
   width: 100%;
   height: 100vh;
 `
@@ -16,7 +16,7 @@ const StyledImg = styled.img`
 const AboutPage = () => (
   <>
     <StyledAboutPage>
-      <h1>Abbout</h1>
+      <H2>About</H2>
       <StyledImg src={logo} />
     </StyledAboutPage>
   </>
