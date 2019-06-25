@@ -1,20 +1,20 @@
 import React from 'react'
 
-import GlobalStyle from '../GlobalStyle/GlobalStyle'
+import Layout from '../components/layout'
+
 import StartPage from '../templates/StartPage'
 import OfferPage from '../templates/OfferPage'
 import AboutPage from '../templates/AboutPage'
 import ContactPage from '../templates/ContactPage'
-import Nav from '../components/Nav/Nav'
 
 const IndexPage = () => (
   <>
-    <GlobalStyle />
-    <Nav />
-    <StartPage />
-    <OfferPage />
-    <AboutPage />
-    <ContactPage />
+    <Layout>
+      <StartPage />
+      <OfferPage />
+      <AboutPage />
+      <ContactPage />
+    </Layout>
   </>
 )
 

@@ -5,7 +5,7 @@ import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import logo from '../images/logo.png'
 
-const StyledAboutPage = styled.div`
+const StyledAboutPage = styled.article`
   width: 100%;
 
   text-align: center;
