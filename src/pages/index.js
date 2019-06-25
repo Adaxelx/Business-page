@@ -1,29 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
-
-const StyledButton = styled.button`
-  height: 100px;
-  width: 40px;
-  background-color: cadetblue;
-`
+import GlobalStyle from '../GlobalStyle/GlobalStyle'
+import StartPage from '../templates/StartPage'
+import OfferPage from '../templates/OfferPage'
+import AboutPage from '../templates/AboutPage'
+import Nav from '../components/Nav/Nav'
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-      <StyledButton>123</StyledButton>
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <>
+    <GlobalStyle />
+    <Nav />
+    <StartPage />
+    <OfferPage />
+    <AboutPage />
+  </>
 )
 
 export default IndexPage
