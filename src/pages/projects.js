@@ -4,6 +4,7 @@ import H2 from '../components/headers/H2'
 import Layout from '../components/layout'
 
 import img from '../images/projects2.png'
+import windows from '../images/windows.png'
 
 /* zółty #f3ba0c */
 
@@ -27,10 +28,12 @@ const StyledImg = styled.img`
 `
 
 const StyledProject = styled.section`
-  height: 300px;
   width: 90%;
   margin-top: 30px;
   background-color: #f3ba0c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const StyledTitleProject = styled.h4`
@@ -41,6 +44,7 @@ const StyledTitleProject = styled.h4`
 const StyledAuthor = styled.h3`
   font-size: 1.5rem;
   margin: 10px 25px 0 0;
+  ${({ color }) => (color === 'T' ? 'color: blue' : 'color: yellow')}
 `
 const StyledTitle = styled.section`
   width: 100%;
@@ -48,6 +52,26 @@ const StyledTitle = styled.section`
   align-items: center;
   justify-content: space-between;
 `
+
+const StyledImgProject = styled.img`
+  width: 90%;
+  margin-top: 10px;
+`
+
+const StyledContent = styled.p`
+  width: 90%;
+  margin-top: 10px;
+  font-size: 1.3rem;
+`
+
+const StyledButton = styled.a`
+  background-color: rgb(194, 194, 206);
+  border: 1px solid black;
+  margin: 10px 0 10px 0;
+  width: 50px;
+  height: 50px;
+`
+
 const Projects = () => {
   return (
     <Layout>
@@ -62,8 +86,16 @@ const Projects = () => {
         <StyledProject>
           <StyledTitle>
             <StyledTitleProject>Windows</StyledTitleProject>
-            <StyledAuthor>Razem</StyledAuthor>
+            <StyledAuthor color="T">Razem</StyledAuthor>
           </StyledTitle>
+          <StyledImgProject src={windows} alt="windows" />
+          <StyledContent>
+            Jest to nasz pierwszy wspólny projekt, czyli klasyczny windows. Przenoszenie ikon, pasek
+            zadań z zegarkiem i menu start, otwierające się okna z połączonymi ściezkami - to
+            wszystko jest tutaj. Projekt jest oparty na reactcie, ale nie zabrakło tam tez
+            styled-components czy context-api.
+          </StyledContent>
+          <StyledButton />
         </StyledProject>
       </StyledProjects>
     </Layout>
