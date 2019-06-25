@@ -8,6 +8,10 @@ const StyledContactPage = styled.div`
 
   padding: 40px 15px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   background-color: #f3ba0c;
 
   text-align: center;
