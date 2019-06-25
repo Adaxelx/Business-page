@@ -5,7 +5,8 @@ import { Link } from 'gatsby'
 const StyledNav = styled.nav`
   height: 40px;
   width: 100%;
-  background-color: orange;
+  background-color: #e09100;
+  color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,10 +16,15 @@ const StyledNav = styled.nav`
   align-items: center;
 `
 
+const StyledLink = styled(Link)`
+  color: white;
+  font-size: 1rem;
+`
+
 const Nav = () => (
   <StyledNav>
     <h1>Haku</h1>
-    <Link to="/page-2/">page 2</Link>
+    <StyledLink to="/page-2/">page 2</StyledLink>
   </StyledNav>
 )
 
