@@ -5,13 +5,13 @@ import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import logo from '../images/logo.png'
 
-const StyledAboutPage = styled.article`
+const StyledAboutPage = styled.div`
   width: 100%;
 
   text-align: center;
   background-color: rgb(194, 194, 206);
 
-  padding: 40px 5px;
+  padding: 40px 15px;
 `
 
 const StyledImg = styled.img`

@@ -25,7 +25,7 @@ const StyledLink = styled(Link)`
 const Nav = () => (
   <StyledNav>
     <h1>Haku</h1>
-    <StyledLink to="/projects/">Nasze projekty</StyledLink>
+    <StyledLink to="/projects/">Portfolio</StyledLink>
   </StyledNav>
 )
 

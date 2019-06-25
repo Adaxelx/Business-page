@@ -10,17 +10,17 @@ import laptop from '../images/laptop.png'
 const StyledOfferPage = styled.div`
   width: 100%;
 
-  padding: 40px 5px;
+  padding: 40px 15px;
 
-  background-color: rgb(243, 186, 12);
+  background-color: #f3ba0c;
 
   text-align: center;
   z-index: 100;
 `
 
 const StyledImg = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 `
 
 const OfferPage = () => (
