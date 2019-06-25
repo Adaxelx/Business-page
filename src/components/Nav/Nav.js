@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
+const StyledLogo = styled.h1`
+  position: absolute;
+  left: 20px;
+`
+
 const StyledNav = styled.nav`
   height: 40px;
   width: 100%;
@@ -12,7 +17,6 @@ const StyledNav = styled.nav`
   left: 0;
   z-index: 4;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 `
 
@@ -20,12 +24,22 @@ const StyledLink = styled(Link)`
   color: white;
   font-size: 1rem;
   text-decoration: none;
+  &.active {
+    transform: scale(0);
+  }
+  position: absolute;
+  right: 20px;
 `
 
 const Nav = () => (
   <StyledNav>
-    <h1>Haku</h1>
-    <StyledLink to="/projects/">Nasze projekty</StyledLink>
+    <StyledLogo>Haku</StyledLogo>
+    <StyledLink activeClassName="active" to="/projects/">
+      Nasze projekty
+    </StyledLink>
+    <StyledLink activeClassName="active" to="/">
+      Home
+    </StyledLink>
   </StyledNav>
 )
 
