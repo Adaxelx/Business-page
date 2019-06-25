@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import H2 from '../components/headers/H2'
+import H3 from '../components/headers/H3'
 import logo from '../images/logo.png'
 
 const StyledAboutPage = styled.div`
@@ -23,9 +24,9 @@ const StyledImg = styled.img`
 const AboutPage = () => (
   <>
     <StyledAboutPage>
-      <H2>Abbout</H2>
+      <H2>About</H2>
       <StyledImg src={logo} />
-      <h3>Who are we?</h3>
+      <H3>Who are we?</H3>
       <p>
         Cupidatat consectetur pariatur voluptate esse aliquip exercitation deserunt non et laborum
         tempor ullamco. Officia proident ipsum occaecat non. Dolore sunt do consectetur laboris amet

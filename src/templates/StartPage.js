@@ -31,7 +31,7 @@ const StyledH1 = styled.h1`
   transform: translate(-50%, -50%);
   text-align: center;
 
-  font-size: 6rem;
+  font-size: 7rem;
 `
 
 const StyledH2 = styled.h1`

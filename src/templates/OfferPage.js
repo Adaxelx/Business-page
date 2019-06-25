@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import H2 from '../components/headers/H2'
+import H3 from '../components/headers/H3'
 
 import search from '../images/search.png'
 import laptop from '../images/laptop.png'
@@ -20,24 +21,20 @@ const StyledOfferPage = styled.div`
 const StyledImg = styled.img`
   width: 200px;
   height: 200px;
-
-  margin: 0 auto;
-
-  display: inline-block;
 `
 
 const OfferPage = () => (
   <StyledOfferPage>
     <H2>Offer</H2>
     <StyledImg src={search} />
-    <h3>Develop Websites</h3>
+    <H3>Develop Websites</H3>
     <p>
       Magna consectetur id ex velit ullamco reprehenderit id amet ut cillum. Exercitation
       consectetur nisi dolor voluptate eu do labore cupidatat ipsum voluptate occaecat adipisicing
       eu.
     </p>
     <StyledImg src={laptop} />
-    <h3>Killing monsters</h3>
+    <H3>Killing monsters</H3>
     <p>
       Magna consectetur id ex velit ullamco reprehenderit id amet ut cillum. Exercitation
       consectetur nisi dolor voluptate eu do labore cupidatat ipsum voluptate occaecat adipisicing
