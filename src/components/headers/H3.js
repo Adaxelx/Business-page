@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
-const H2 = styled.h2`
-
-  font-size: 4rem;
+const H3 = styled.h3`
+  font-size: 2rem;
   padding-bottom: 10px;
-
 `
 
-export default H2
+export default H3
