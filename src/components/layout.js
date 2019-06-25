@@ -3,10 +3,10 @@ import GlobalStyle from '../GlobalStyle/GlobalStyle'
 import Nav from './Nav/Nav'
 import Footer from './Footer/Footer'
 
-export default ({ children }) => (
+export default ({ children, index }) => (
   <>
     <GlobalStyle />
-    <Nav />
+    <Nav index={index} />
     {children}
     <Footer />
   </>

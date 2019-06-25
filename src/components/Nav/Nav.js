@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 const StyledNav = styled.nav`
@@ -22,11 +23,19 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const Nav = () => (
+const Nav = ({ index }) => (
   <StyledNav>
     <h1>Haku</h1>
-    <StyledLink to="/projects/">Portfolio</StyledLink>
+    {index ? (
+      <StyledLink to="/projects/">Portfolio</StyledLink>
+    ) : (
+      <StyledLink to="/index/">Index</StyledLink>
+    )}
   </StyledNav>
 )
+
+Nav.propTypes = {
+  index: PropTypes.bool.isRequired,
+}
 
 export default Nav
