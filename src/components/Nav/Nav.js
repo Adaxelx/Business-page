@@ -18,14 +18,14 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
 `
 
 const Nav = () => (
   <StyledNav>
     <h1>Haku</h1>
-    <StyledLink to="/page-2/">page 2</StyledLink>
+    <StyledLink to="/page-2/">portfolio</StyledLink>
   </StyledNav>
 )
 
