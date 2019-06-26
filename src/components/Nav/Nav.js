@@ -23,9 +23,13 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
+const StyledH1 = styled(StyledLink)`
+  font-size: 3rem;
+`
+
 const Nav = ({ index }) => (
   <StyledNav>
-    <h1>Haku</h1>
+    <StyledH1 to="/index/">Haku</StyledH1>
     {index ? (
       <StyledLink to="/projects/">Portfolio</StyledLink>
     ) : (
