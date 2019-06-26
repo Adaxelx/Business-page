@@ -39,7 +39,11 @@ const Nav = ({ index }) => (
 )
 
 Nav.propTypes = {
-  index: PropTypes.bool.isRequired,
+  index: PropTypes.bool,
+}
+
+Nav.defaultProps = {
+  index: true,
 }
 
 export default Nav
