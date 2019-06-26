@@ -3,6 +3,11 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
+const StyledLogo = styled.h1`
+  position: absolute;
+  left: 20px;
+`
+
 const StyledNav = styled.nav`
   height: 40px;
   width: 100%;
@@ -13,7 +18,6 @@ const StyledNav = styled.nav`
   left: 0;
   z-index: 4;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 `
 
@@ -21,6 +25,8 @@ const StyledLink = styled(Link)`
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
+  position: absolute;
+  right: 20px;
 `
 
 const StyledH1 = styled(StyledLink)`
