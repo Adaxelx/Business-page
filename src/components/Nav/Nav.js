@@ -3,11 +3,6 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const StyledLogo = styled.h1`
-  position: absolute;
-  left: 20px;
-`
-
 const StyledNav = styled.nav`
   height: 40px;
   width: 100%;
@@ -19,14 +14,13 @@ const StyledNav = styled.nav`
   z-index: 4;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 `
 
 const StyledLink = styled(Link)`
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
-  position: absolute;
-  right: 20px;
 `
 
 const StyledH1 = styled(StyledLink)`
@@ -35,17 +29,21 @@ const StyledH1 = styled(StyledLink)`
 
 const Nav = ({ index }) => (
   <StyledNav>
-    <StyledH1 to="/index/">Haku</StyledH1>
+    <StyledH1 to="/">Haku</StyledH1>
     {index ? (
       <StyledLink to="/projects/">Portfolio</StyledLink>
     ) : (
-      <StyledLink to="/index/">Index</StyledLink>
+      <StyledLink to="/">Index</StyledLink>
     )}
   </StyledNav>
 )
 
 Nav.propTypes = {
-  index: PropTypes.bool.isRequired,
+  index: PropTypes.bool,
+}
+
+Nav.defaultProps = {
+  index: true,
 }
 
 export default Nav

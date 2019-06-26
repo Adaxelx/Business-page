@@ -59,15 +59,21 @@ class Project extends React.Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
   handleScroll = () => {
     const scrollV = window.scrollY
     const { ref } = this
-    const off = ref.current.offsetTop
-    const height = ref.current.offsetHeight
-    if (off < scrollV + window.innerHeight - height / 4) {
-      this.setState({
-        active: true,
-      })
+    if (ref.current !== undefined && ref.current !== null) {
+      const off = ref.current.offsetTop
+      const height = ref.current.offsetHeight
+      if (off < scrollV + window.innerHeight - height / 4) {
+        this.setState({
+          active: true,
+        })
+      }
     }
   }
 
