@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import H2 from '../components/headers/H2'
+import H3 from '../components/headers/H3'
 import Layout from '../components/layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
@@ -25,6 +26,32 @@ const StyledDescription = styled.p`
   width: 90%;
 `
 
+const StyledSection = styled.section`
+  width: 90%;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #f3ba0c;
+`
+const StyledGitSec = styled.section`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+`
+
+const StyledGit = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+`
+
+const StyledButton = styled.a`
+  background-color: rgb(194, 194, 206);
+  border: 1px solid black;
+  margin: 10px 0 10px 0;
+  width: 50px;
+  height: 50px;
+`
 const Projects = () => {
   const projectsData = [
     {
@@ -68,6 +95,20 @@ const Projects = () => {
           postaraliśmy się wybrać te najbardziej interesujące.
         </StyledDescription>
         {projectArr}
+        <StyledSection>
+          <H3>Github</H3>
+          <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
+          <StyledGitSec>
+            <StyledGit>
+              <h5>Adrian Gklasdfgh</h5>
+              <StyledButton target="_blank" href="https://github.com/Adaxelx" />
+            </StyledGit>
+            <StyledGit>
+              <h5>Kacper Gklasdfgh</h5>
+              <StyledButton target="_blank" href="https://github.com/superkacper4" />
+            </StyledGit>
+          </StyledGitSec>
+        </StyledSection>
       </StyledProjects>
     </Layout>
   )
