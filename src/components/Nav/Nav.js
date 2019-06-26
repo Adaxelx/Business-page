@@ -22,7 +22,7 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-decoration: none;
   &.active {
     transform: scale(0);

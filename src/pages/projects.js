@@ -6,6 +6,7 @@ import Project from '../components/Project'
 
 import img from '../images/projects2.png'
 import windows from '../images/windows.png'
+import salon from '../images/salon.png'
 
 /* zółty #f3ba0c */
 
@@ -41,12 +42,12 @@ const Projects = () => {
     },
     {
       key: 1,
-      title: 'Windows',
-      author: 'Razem',
-      img: windows,
+      title: 'Salon fryzjerski',
+      author: 'Gksasddsa',
+      img: salon,
       content:
-        'Jest to nasz pierwszy wspólny projekt, czyli klasyczny windows. Przenoszenie ikon, pasek zadań z zegarkiem i menu start otwierające się okna z połączonymi ściezkami - to wszystko jest tutaj. Projekt jest oparty na reactcie, ale nie zabrakło tam tez styled-components czy context-api.',
-      link: 'https://github.com/superkacper4/windows',
+        'Jedna z wielu prób utworzenia strony salonu fryzjerskiego. Mozna tam znaleźć animacje na scrolla, formularz, rózne nawigacje na desktop/mobile oraz ciekawą animacje routingu. Strona oparta na reactcie z wykorzystaniem react-routera, react-transition-group oraz preprocesora Sass.',
+      link: 'https://github.com/adaxelx/strona-salonu',
     },
   ]
 

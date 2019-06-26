@@ -9,6 +9,8 @@ const StyledProject = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.5s;
+  ${({ active }) => (active ? 'transform: translateY(0%);' : 'transform: translateY(100%);')}
 `
 
 const StyledTitleProject = styled.h4`
@@ -19,7 +21,7 @@ const StyledTitleProject = styled.h4`
 const StyledAuthor = styled.h3`
   font-size: 1.5rem;
   margin: 10px 25px 0 0;
-  ${({ color }) => (color === 'T' ? 'color: blue' : 'color: yellow')}
+  ${({ color }) => (color === 'Razem' ? 'color: blue' : 'color: yellow')}
 `
 const StyledTitle = styled.section`
   width: 100%;
@@ -47,18 +49,44 @@ const StyledButton = styled.a`
   height: 50px;
 `
 
-const Project = ({ title, author, img, content, link }) => {
-  return (
-    <StyledProject>
-      <StyledTitle>
-        <StyledTitleProject>{title}</StyledTitleProject>
-        <StyledAuthor color="T">{author}</StyledAuthor>
-      </StyledTitle>
-      <StyledImgProject src={img} alt="windows" />
-      <StyledContent>{content}</StyledContent>
-      <StyledButton target="_blank" href={link} />
-    </StyledProject>
-  )
+class Project extends React.Component {
+  state = { active: false }
+
+  ref = React.createRef()
+
+  componentDidMount() {
+    setTimeout(this.handleScroll, 500)
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const scrollV = window.scrollY
+    const { ref } = this
+    const off = ref.current.offsetTop
+    const height = ref.current.offsetHeight
+    if (off < scrollV + window.innerHeight - height / 4) {
+      this.setState({
+        active: true,
+      })
+    }
+  }
+
+  render() {
+    const { title, author, img, content, link } = this.props
+    const { ref } = this
+    const { active } = this.state
+    return (
+      <StyledProject ref={ref} active={active}>
+        <StyledTitle>
+          <StyledTitleProject>{title}</StyledTitleProject>
+          <StyledAuthor color={author}>{author}</StyledAuthor>
+        </StyledTitle>
+        <StyledImgProject src={img} alt="windows" />
+        <StyledContent>{content}</StyledContent>
+        <StyledButton target="_blank" href={link} />
+      </StyledProject>
+    )
+  }
 }
 
 Project.propTypes = {
