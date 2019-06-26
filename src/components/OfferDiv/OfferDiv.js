@@ -33,24 +33,30 @@ class OfferDiv extends React.Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
   handleScroll = () => {
     const scrollV = window.scrollY
     const { ref } = this
-    const off = ref.current.offsetTop
-    const height = ref.current.offsetHeight
-    if (off < scrollV + window.innerHeight - height / 4) {
-      this.setState({
-        active: true,
-      })
+    if (ref.current !== undefined && ref.current !== null) {
+      const off = ref.current.offsetTop
+      const height = ref.current.offsetHeight
+      if (off < scrollV + window.innerHeight - height / 4) {
+        this.setState({
+          active: true,
+        })
+      }
     }
   }
 
   render() {
     const { ref } = this
     const { active } = this.state
-    const { key, src, title, descr } = this.props
+    const { src, title, descr } = this.props
     return (
-      <StyledOfferDiv key={key} ref={ref} active={active}>
+      <StyledOfferDiv ref={ref} active={active}>
         <StyledImg src={src} />
         <H3>{title}</H3>
         <P>{descr}</P>
@@ -60,7 +66,6 @@ class OfferDiv extends React.Component {
 }
 
 OfferDiv.propTypes = {
-  key: PropTypes.number.isRequired,
   src: PropTypes.string,
   title: PropTypes.string.isRequired,
   descr: PropTypes.string,
