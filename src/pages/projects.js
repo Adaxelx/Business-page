@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import H2 from '../components/headers/H2'
 import Layout from '../components/layout'
 import Project from '../components/Project'
-
+import Logo from '../components/Logo'
 import img from '../images/projects2.png'
 import windows from '../images/windows.png'
 import salon from '../images/salon.png'
@@ -18,15 +18,11 @@ const StyledProjects = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding-bottom: 30px;
 `
 const StyledDescription = styled.p`
   margin-top: 30px;
   width: 90%;
-`
-
-const StyledImg = styled.img`
-  width: 200px;
-  margin-top: 30px;
 `
 
 const Projects = () => {
@@ -65,7 +61,7 @@ const Projects = () => {
     <Layout>
       <StyledProjects>
         <H2>Nasze projekty</H2>
-        <StyledImg src={img} alt="" />
+        <Logo src={img} alt="" />
         <StyledDescription>
           Jest to zbiór naszych wspólnych jak i samodzielnych projektów. Przedstawione tutaj
           projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak

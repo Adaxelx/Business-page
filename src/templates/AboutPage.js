@@ -5,6 +5,7 @@ import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import logo from '../images/logo.png'
 import P from '../components/Paragraph/P'
+import Logo from '../components/Logo'
 
 const StyledAboutPage = styled.div`
   width: 100%;
@@ -15,18 +16,11 @@ const StyledAboutPage = styled.div`
   padding: 40px 15px;
 `
 
-const StyledImg = styled.img`
-  width: 200px;
-  height: 150px;
-
-  margin: 10px 0;
-`
-
 const AboutPage = () => (
   <>
     <StyledAboutPage>
       <H2>About</H2>
-      <StyledImg src={logo} />
+      <Logo src={logo} />
       <H3>Who are we?</H3>
       <P>
         Cupidatat consectetur pariatur voluptate esse aliquip exercitation deserunt non et laborum
