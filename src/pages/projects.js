@@ -62,7 +62,7 @@ const Projects = () => {
     />
   ))
   return (
-    <Layout>
+    <Layout index={0}>
       <StyledProjects>
         <H2>Nasze projekty</H2>
         <StyledImg src={img} alt="" />

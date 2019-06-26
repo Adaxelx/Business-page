@@ -25,6 +25,7 @@ const StyledLink = styled(Link)`
 
 const StyledH1 = styled(StyledLink)`
   font-size: 3rem;
+  font-weight: 700;
 `
 
 const Nav = ({ index }) => (
