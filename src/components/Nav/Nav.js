@@ -13,8 +13,8 @@ const StyledNav = styled.nav`
   left: 0;
   z-index: 4;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 `
 
 const StyledLink = styled(Link)`
@@ -29,11 +29,11 @@ const StyledH1 = styled(StyledLink)`
 
 const Nav = ({ index }) => (
   <StyledNav>
-    <StyledH1 to="/index/">Haku</StyledH1>
+    <StyledH1 to="/">Haku</StyledH1>
     {index ? (
       <StyledLink to="/projects/">Portfolio</StyledLink>
     ) : (
-      <StyledLink to="/index/">Index</StyledLink>
+      <StyledLink to="/">Index</StyledLink>
     )}
   </StyledNav>
 )
