@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-
+import Logo from '../Logo'
 import H3 from '../headers/H3'
 import P from '../Paragraph/P'
 
@@ -14,11 +14,6 @@ const StyledOfferDiv = styled.div`
   flex-direction: column;
   transition: 0.5s;
   ${({ active }) => (active ? 'transform: translateY(0%);' : 'transform: translateY(100%);')}
-`
-
-const StyledImg = styled.img`
-  width: 250px;
-  height: 250px;
 `
 
 class OfferDiv extends React.Component {
@@ -57,7 +52,7 @@ class OfferDiv extends React.Component {
     const { src, title, descr } = this.props
     return (
       <StyledOfferDiv ref={ref} active={active}>
-        <StyledImg src={src} />
+        <Logo src={src} />
         <H3>{title}</H3>
         <P>{descr}</P>
       </StyledOfferDiv>

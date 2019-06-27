@@ -56,11 +56,11 @@ class Project extends React.Component {
 
   componentDidMount() {
     setTimeout(this.handleScroll, 500)
-    window.addEventListener('scroll', this.handleScroll)
+    setTimeout(() => window.addEventListener('scroll', this.handleScroll), 500)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    setTimeout(() => window.removeEventListener('scroll', this.handleScroll), 500)
   }
 
   handleScroll = () => {
