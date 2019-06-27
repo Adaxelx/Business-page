@@ -55,6 +55,12 @@ const StyledButton = styled.button`
   border-radius: 50px;
 `
 
+const StyledMap = styled.iframe`
+  height: 300px;
+  width: 100%;
+  margin-top: 15px;
+`
+
 const ContactPage = () => (
   <>
     <StyledContactPage>
@@ -63,6 +69,12 @@ const ContactPage = () => (
       <StyledInput type="email" placeholder="E-mail" />
       <StyledTextArea type="text" placeholder="Your message" />
       <StyledButton>Send</StyledButton>
+      <StyledMap
+        title="This is a unique title"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7790.701962398872!2d23.131991354695444!3d52.04481884891013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1561617451488!5m2!1spl!2spl"
+        frameBorder="0"
+        allowFullScreen
+      />
     </StyledContactPage>
   </>
 )

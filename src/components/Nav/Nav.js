@@ -21,16 +21,18 @@ const StyledLink = styled(Link)`
   color: white;
   font-size: 1.5rem;
   text-decoration: none;
+  text-align: center;
+  width: 100px;
 `
 
-const StyledH1 = styled(StyledLink)`
+const StyledLogo = styled(StyledLink)`
   font-size: 3rem;
   font-weight: 700;
 `
 
 const Nav = ({ index }) => (
   <StyledNav>
-    <StyledH1 to="/">Haku</StyledH1>
+    <StyledLogo to="/">Haku</StyledLogo>
     {index ? (
       <StyledLink to="/projects/">Portfolio</StyledLink>
     ) : (
