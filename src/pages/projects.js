@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
 import img from '../images/projects2.png'
@@ -13,7 +13,7 @@ import salon from '../images/salon.png'
 
 const StyledProjects = styled.article`
   margin-top: 40px;
-  background-color: rgb(194, 194, 206);
+  background-color: ${({ theme }) => theme.grey};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ const StyledSection = styled.section`
   width: 90%;
   margin-top: 30px;
   padding: 10px 20px;
-  background-color: #f3ba0c;
+  background-color: ${({ theme }) => theme.orange};
 `
 const StyledGitSec = styled.section`
   width: 100%;
@@ -46,7 +46,7 @@ const StyledGit = styled.section`
 `
 
 const StyledButton = styled.a`
-  background-color: rgb(194, 194, 206);
+  background-color: ${({ theme }) => theme.grey};
   border: 1px solid black;
   margin: 10px 0 10px 0;
   width: 50px;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 import StartPage from '../templates/StartPage'
 import OfferPage from '../templates/OfferPage'

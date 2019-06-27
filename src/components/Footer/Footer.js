@@ -5,7 +5,7 @@ import FooterSection from './FooterSection'
 
 const StyledFooter = styled.footer`
   width: 100%;
-  background-color: #e09100;
+  background-color: ${({ theme }) => theme.orange};
   display: flex;
   flex-direction: column;
   align-items: center;

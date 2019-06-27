@@ -11,9 +11,8 @@ import OfferDiv from '../components/OfferDiv/OfferDiv'
 const StyledOfferPage = styled.div`
   width: 100%;
 
-  padding: 40px 15px;
-
-  background-color: #f3ba0c;
+  padding: ${({ theme }) => theme.padding};
+  background-color: ${({ theme }) => theme.yellow};
 
   text-align: center;
 `
