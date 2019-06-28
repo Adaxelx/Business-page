@@ -6,7 +6,6 @@ import H3 from '../components/headers/H3'
 import Layout from '../components/layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
-
 import img from '../images/projects2.png'
 import windows from '../images/windows.png'
 import salon from '../images/salon.png'
@@ -25,18 +24,33 @@ const StyledProjects = styled.article`
   justify-content: space-around;
   padding-bottom: 30px;
 `
+
+const StyledLogoCon = styled.section`
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 const StyledDescription = styled.p`
-  margin-top: 30px;
+  margin-top: ${({ theme }) => theme.margin};
   width: 90%;
+
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
+    width: 40%;
+    margin-top: 0;
+    align-self: center;
+  }
 `
 
 const StyledSection = styled.section`
   width: 90%;
-  margin-top: 30px;
+  margin-top: ${({ theme }) => theme.margin};
   padding: 10px 20px;
-  background-color: #f3ba0c;
+  background-color: ${({ theme }) => theme.yellow};
 
-  @media ${device.mobileS} and (orientation: landscape) {
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
     width: 40%;
   }
 `
@@ -66,13 +80,20 @@ const StyledConSec = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  @media ${device.mobileS} and (orientation: landscape) {
+
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
   }
 `
+
+const StyledH5 = styled.h5`
+  text-align: center;
+`
+
 const Projects = () => {
   const projectsData = [
     {
@@ -136,12 +157,16 @@ const Projects = () => {
     <Layout index={0}>
       <StyledProjects>
         <H2>Nasze projekty</H2>
-        <Logo src={img} alt="" />
-        <StyledDescription>
-          Jest to zbiór naszych wspólnych jak i samodzielnych projektów. Przedstawione tutaj
-          projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak
-          postaraliśmy się wybrać te najbardziej interesujące.
-        </StyledDescription>
+        <StyledConSec>
+          <StyledLogoCon>
+            <Logo src={img} alt="" />
+          </StyledLogoCon>
+          <StyledDescription>
+            Jest to zbiór naszych wspólnych jak i samodzielnych projektów. Przedstawione tutaj
+            projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak
+            postaraliśmy się wybrać te najbardziej interesujące.
+          </StyledDescription>
+        </StyledConSec>
         <StyledConSec>
           {projectArr}
           <StyledSection>
@@ -149,11 +174,11 @@ const Projects = () => {
             <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
             <StyledGitSec>
               <StyledGit>
-                <h5>Adrian Gklasdfgh</h5>
+                <StyledH5>Adrian Gklasdfgh</StyledH5>
                 <StyledButton target="_blank" href="https://github.com/Adaxelx" />
               </StyledGit>
               <StyledGit>
-                <h5>Kacper Gklasdfgh</h5>
+                <StyledH5>Kacper Gklasdfgh</StyledH5>
                 <StyledButton target="_blank" href="https://github.com/superkacper4" />
               </StyledGit>
             </StyledGitSec>

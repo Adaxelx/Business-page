@@ -11,9 +11,12 @@ const StyledProject = styled.section`
   flex-direction: column;
   align-items: center;
   transition: 0.5s;
-  ${({ active }) => (active ? 'transform: translateY(0%);' : 'transform: translateY(100%);')}
+  ${({ active }) =>
+    active ? 'transform: translateY(0%); opacity: 1;' : 'transform: translateY(100%); opacity:0;'}
   
-  @media ${device.mobileS} and (orientation: landscape){
+  @media ${device.mobileS} and (orientation: landscape), ${
+  device.tablet
+} and (orientation: portrait){
     width: 40%;
   }
 `
