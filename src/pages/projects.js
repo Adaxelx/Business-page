@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import device from '../templates/MediaWidth'
 import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import Layout from '../components/layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
+
 import img from '../images/projects2.png'
 import windows from '../images/windows.png'
 import salon from '../images/salon.png'
-
+import react2 from '../images/react-router-2.png'
+import estne from '../images/estne.png'
+import witcher from '../images/witcher.png'
 /* zółty #f3ba0c */
 
 const StyledProjects = styled.article`
@@ -31,6 +35,10 @@ const StyledSection = styled.section`
   margin-top: 30px;
   padding: 10px 20px;
   background-color: #f3ba0c;
+
+  @media ${device.mobileS} and (orientation: landscape) {
+    width: 40%;
+  }
 `
 const StyledGitSec = styled.section`
   width: 100%;
@@ -52,6 +60,19 @@ const StyledButton = styled.a`
   width: 50px;
   height: 50px;
 `
+
+const StyledConSec = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media ${device.mobileS} and (orientation: landscape) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+`
 const Projects = () => {
   const projectsData = [
     {
@@ -65,12 +86,39 @@ const Projects = () => {
     },
     {
       key: 1,
+      title: 'Estne',
+      author: 'Gksasddsa',
+      img: estne,
+      content:
+        'Jest to strona firmy Estne. Mimo ze jest oparta na HTML i CSS nie mozna powiedzieć, ze jest to strona prosta. Mozna na niej znalezc zarówno ciekawy design, jak i przejzystość i interesujące animacje. Składa się z 3 sekcji, wszystkie na jednej stronie.',
+      link: 'https://github.com/superkacper4/estne-website',
+    },
+    {
+      key: 2,
       title: 'Salon fryzjerski',
       author: 'Gksasddsa',
       img: salon,
       content:
         'Jedna z wielu prób utworzenia strony salonu fryzjerskiego. Mozna tam znaleźć animacje na scrolla, formularz, rózne nawigacje na desktop/mobile oraz ciekawą animacje routingu. Strona oparta na reactcie z wykorzystaniem react-routera, react-transition-group oraz preprocesora Sass.',
       link: 'https://github.com/adaxelx/strona-salonu',
+    },
+    {
+      key: 3,
+      title: 'Strona biznesowa',
+      author: 'Gksasddsa',
+      img: react2,
+      content:
+        'Jest to szablon strony biznesowej. Jedna z pierwszych pierwszych stron oparta na reactcie, z wykorzystaniem sassa. Dodatkowo został tam uzyty react-router, który obsługuję całą nawigację na stornie. Jest to tez jedna z pierwszych prób samodzielnego designu strony.',
+      link: 'https://github.com/adaxelx/react-react-router-2',
+    },
+    {
+      key: 4,
+      title: 'History of Witchers',
+      author: 'Gksasddsa',
+      img: witcher,
+      content:
+        'Strona o jednej z najlepszych gier, czyli oczywiście o Wiedzminie. Ale oczywiście poza ciekawą tematyką sama budowa strony równiez jest bardzo ciekawa. Strona oparta na reactcie wraz z uzytym react-routerem. Mozna na niej znalezc przede wszystkim ciekawe menu boczne oraz interesujący design.',
+      link: 'https://github.com/superkacper4/witcher-story-website',
     },
   ]
 
@@ -94,21 +142,23 @@ const Projects = () => {
           projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak
           postaraliśmy się wybrać te najbardziej interesujące.
         </StyledDescription>
-        {projectArr}
-        <StyledSection>
-          <H3>Github</H3>
-          <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
-          <StyledGitSec>
-            <StyledGit>
-              <h5>Adrian Gklasdfgh</h5>
-              <StyledButton target="_blank" href="https://github.com/Adaxelx" />
-            </StyledGit>
-            <StyledGit>
-              <h5>Kacper Gklasdfgh</h5>
-              <StyledButton target="_blank" href="https://github.com/superkacper4" />
-            </StyledGit>
-          </StyledGitSec>
-        </StyledSection>
+        <StyledConSec>
+          {projectArr}
+          <StyledSection>
+            <H3>Github</H3>
+            <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
+            <StyledGitSec>
+              <StyledGit>
+                <h5>Adrian Gklasdfgh</h5>
+                <StyledButton target="_blank" href="https://github.com/Adaxelx" />
+              </StyledGit>
+              <StyledGit>
+                <h5>Kacper Gklasdfgh</h5>
+                <StyledButton target="_blank" href="https://github.com/superkacper4" />
+              </StyledGit>
+            </StyledGitSec>
+          </StyledSection>
+        </StyledConSec>
       </StyledProjects>
     </Layout>
   )

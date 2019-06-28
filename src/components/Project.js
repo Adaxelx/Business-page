@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import device from '../templates/MediaWidth'
 
 const StyledProject = styled.section`
   width: 90%;
@@ -11,6 +12,10 @@ const StyledProject = styled.section`
   align-items: center;
   transition: 0.5s;
   ${({ active }) => (active ? 'transform: translateY(0%);' : 'transform: translateY(100%);')}
+  
+  @media ${device.mobileS} and (orientation: landscape){
+    width: 40%;
+  }
 `
 
 const StyledTitleProject = styled.h4`
@@ -21,6 +26,9 @@ const StyledTitleProject = styled.h4`
 const StyledAuthor = styled.h3`
   font-size: 1.5rem;
   margin: 10px 25px 0 0;
+  @media ${device.mobileS} and (orientation: landscape) {
+    margin: 10px 0 0 25px;
+  }
   ${({ color }) => (color === 'Razem' ? 'color: blue' : 'color: yellow')}
 `
 const StyledTitle = styled.section`
@@ -28,6 +36,11 @@ const StyledTitle = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media ${device.mobileS} and (orientation: landscape) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const StyledImgProject = styled.img`
@@ -69,7 +82,7 @@ class Project extends React.Component {
     if (ref.current !== undefined && ref.current !== null) {
       const off = ref.current.offsetTop
       const height = ref.current.offsetHeight
-      if (off < scrollV + window.innerHeight - height / 4) {
+      if (off < scrollV + window.innerHeight - height / 9) {
         this.setState({
           active: true,
         })
