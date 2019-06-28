@@ -3,15 +3,13 @@ import styled from 'styled-components'
 
 import startpage from '../images/startpage.jpg'
 
-const StyledStartPage = styled.div`
+const StyledStartPage = styled.section`
+  position: relative;
   height: 100vh;
   width: 100%;
   background: url(${startpage}) no-repeat center center fixed;
   background-size: cover;
   color: white;
-  display: flex;
-  flex-direction: column;
-
   &::before {
     content: '';
     position: absolute;
@@ -24,23 +22,24 @@ const StyledStartPage = styled.div`
   }
 `
 
-const StyledH1 = styled.h1`
+const StyledTitle = styled.section`
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
+const StyledH1 = styled.h1`
+  text-align: center;
   font-size: 7rem;
 `
 
 const StyledH2 = styled.h1`
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-
   font-size: 2rem;
 `
 
@@ -66,8 +65,10 @@ class StartPage extends React.Component {
   render() {
     return (
       <StyledStartPage>
-        <StyledH1>Haku</StyledH1>
-        <StyledH2>We are cool</StyledH2>
+        <StyledTitle>
+          <StyledH1>Haku</StyledH1>
+          <StyledH2>We are cool</StyledH2>
+        </StyledTitle>
         <StyledArrow onClick={this.handleClick}>X</StyledArrow>
       </StyledStartPage>
     )

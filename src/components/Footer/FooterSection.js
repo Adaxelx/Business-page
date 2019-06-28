@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import device from '../../templates/MediaWidth'
 import H3 from '../headers/H3'
 
 const StyledSection = styled.section`
   margin-bottom: 30px;
-  width: 90%;
+  position: relative;
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
+    max-width: 30%;
+  }
 `
 
 const FooterSection = ({ title, content1, content2 }) => {

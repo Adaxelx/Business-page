@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import H2 from '../headers/H2'
+import device from '../../templates/MediaWidth'
 import FooterSection from './FooterSection'
 
 const StyledFooter = styled.footer`
@@ -9,6 +10,20 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 5%;
+`
+
+const StyledContent = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.laptopL} and (orientation: portrait) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 `
 
 const Footer = () => {
@@ -42,7 +57,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <H2>Więcej o nas!</H2>
-      {sections}
+      <StyledContent>{sections}</StyledContent>
     </StyledFooter>
   )
 }
