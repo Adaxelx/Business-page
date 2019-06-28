@@ -22,7 +22,7 @@ const StyledCon = styled.section`
   @media ${device.mobileS} and (orientation: landscape),
     ${device.tablet} and (orientation: portrait) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
   }
 `
