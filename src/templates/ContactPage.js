@@ -6,13 +6,12 @@ import H2 from '../components/headers/H2'
 const StyledContactPage = styled.div`
   width: 100%;
 
-  padding: 40px 15px;
-
+  padding: ${({ theme }) => theme.padding};
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-color: #f3ba0c;
+  background-color: ${({ theme }) => theme.yellow};
 
   text-align: center;
 `
@@ -25,7 +24,7 @@ const StyledInput = styled.input`
   text-align: center;
   padding: 2px;
   margin-bottom: 15px;
-  font-size: 1.75rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   /* border: black solid 2px; */
   border-radius: 50px;
 `
@@ -38,7 +37,7 @@ const StyledTextArea = styled.textarea`
   text-align: center;
   padding: 12px;
   margin-bottom: 15px;
-  font-size: 1.75rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   /* border: black solid 2px; */
   border-radius: 50px;
 `
@@ -46,13 +45,19 @@ const StyledTextArea = styled.textarea`
 const StyledButton = styled.button`
   width: 100px;
   height: 40px;
-  background-color: #e09100;
+  background-color: ${({ theme }) => theme.orange};
   text-align: center;
   padding: 2px;
-  font-size: 1.75rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   /* border: black solid 2px; */
   border: none;
   border-radius: 50px;
+`
+
+const StyledMap = styled.iframe`
+  height: 300px;
+  width: 100%;
+  margin-top: 15px;
 `
 
 const ContactPage = () => (
@@ -63,6 +68,12 @@ const ContactPage = () => (
       <StyledInput type="email" placeholder="E-mail" />
       <StyledTextArea type="text" placeholder="Your message" />
       <StyledButton>Send</StyledButton>
+      <StyledMap
+        title="This is a unique title"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7790.701962398872!2d23.131991354695444!3d52.04481884891013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1561617451488!5m2!1spl!2spl"
+        frameBorder="0"
+        allowFullScreen
+      />
     </StyledContactPage>
   </>
 )

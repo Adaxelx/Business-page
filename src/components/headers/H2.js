@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const H2 = styled.h2`
-  font-size: 4rem;
+  font-size: ${({ theme }) => theme.fontSize.xxl};
   padding-bottom: 10px;
 `
 
