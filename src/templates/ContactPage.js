@@ -7,26 +7,42 @@ const StyledContactPage = styled.div`
   width: 100%;
 
   padding: ${({ theme }) => theme.padding};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   background-color: ${({ theme }) => theme.yellow};
 
   text-align: center;
 `
 
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSize.m};
+
+  @media ${({ theme }) => theme.device.moblieS} {
+    width: 250px;
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+  @media ${({ theme }) => theme.device.moblieM} {
+    width: 350px;
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+`
+
 const StyledInput = styled.input`
   background-color: white;
-  width: 250px;
+  width: 100%;
   height: 40px;
   border: none;
   text-align: center;
   padding: 2px;
   margin-bottom: 15px;
-  font-size: ${({ theme }) => theme.fontSize.m};
   /* border: black solid 2px; */
   border-radius: 50px;
+
+  @media ${({ theme }) => theme.device.moblieM} {
+    height: 50px;
+  }
 `
 
 const StyledTextArea = styled.textarea`
@@ -37,9 +53,12 @@ const StyledTextArea = styled.textarea`
   text-align: center;
   padding: 12px;
   margin-bottom: 15px;
-  font-size: ${({ theme }) => theme.fontSize.m};
   /* border: black solid 2px; */
   border-radius: 50px;
+
+  @media ${({ theme }) => theme.device.moblieM} {
+    width: 100%;
+  }
 `
 
 const StyledButton = styled.button`
@@ -52,28 +71,52 @@ const StyledButton = styled.button`
   /* border: black solid 2px; */
   border: none;
   border-radius: 50px;
+
+  @media ${({ theme }) => theme.device.moblieM} {
+    width: 150px;
+    height: 50px;
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
 `
 
 const StyledMap = styled.iframe`
   height: 300px;
   width: 100%;
   margin-top: 15px;
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 60%;
+    height: 400px;
+  }
+`
+
+const StyledContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media ${({ theme }) => theme.device.laptop} {
+    flex-direction: row;
+  }
 `
 
 const ContactPage = () => (
   <>
     <StyledContactPage>
       <H2>Contact</H2>
-      <StyledInput type="text" placeholder="Nick" />
-      <StyledInput type="email" placeholder="E-mail" />
-      <StyledTextArea type="text" placeholder="Your message" />
-      <StyledButton>Send</StyledButton>
-      <StyledMap
-        title="This is a unique title"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7790.701962398872!2d23.131991354695444!3d52.04481884891013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1561617451488!5m2!1spl!2spl"
-        frameBorder="0"
-        allowFullScreen
-      />
+      <StyledContactWrapper>
+        <StyledForm>
+          <StyledInput type="text" placeholder="Nick" />
+          <StyledInput type="email" placeholder="E-mail" />
+          <StyledTextArea type="text" placeholder="Your message" />
+          <StyledButton>Send</StyledButton>
+        </StyledForm>
+        <StyledMap
+          title="This is a unique title"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7790.701962398872!2d23.131991354695444!3d52.04481884891013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1561617451488!5m2!1spl!2spl"
+          frameBorder="0"
+          allowFullScreen
+        />
+      </StyledContactWrapper>
     </StyledContactPage>
   </>
 )
