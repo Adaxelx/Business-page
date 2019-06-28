@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import device from '../templates/MediaWidth'
+import P from '../components/Paragraph/P'
 import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import Layout from '../components/layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
+
 import img from '../images/projects2.png'
 import windows from '../images/windows.png'
 import salon from '../images/salon.png'
@@ -18,11 +20,16 @@ const StyledProjects = styled.article`
   margin-top: 40px;
   background-color: ${({ theme }) => theme.grey};
   width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding-bottom: 30px;
+
+  @media ${device.tablet} and (orientation: portrait) {
+    margin-top: 60px;
+  }
 `
 
 const StyledLogoCon = styled.section`
@@ -171,7 +178,7 @@ const Projects = () => {
           {projectArr}
           <StyledSection>
             <H3>Github</H3>
-            <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
+            <P>Resztę naszych projektów mozna obejrzeć na naszych githubach:</P>
             <StyledGitSec>
               <StyledGit>
                 <StyledH5>Adrian Gklasdfgh</StyledH5>

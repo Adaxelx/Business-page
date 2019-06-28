@@ -19,7 +19,7 @@ const StyledContent = styled.section`
   width: 90%;
 
   @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+    ${device.laptopL} and (orientation: portrait) {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;

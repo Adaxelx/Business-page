@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import startpage from '../images/startpage.jpg'
 
-const StyledStartPage = styled.div`
+const StyledStartPage = styled.section`
+  position: relative;
   height: 100vh;
   width: 100%;
   background: url(${startpage}) no-repeat center center fixed;

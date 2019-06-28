@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import device from '../../templates/MediaWidth'
 
 const StyledNav = styled.nav`
   height: 40px;
@@ -15,6 +16,10 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+  @media ${device.tablet} and (orientation: portrait) {
+    height: 60px;
+  }
 `
 
 const StyledLink = styled(Link)`

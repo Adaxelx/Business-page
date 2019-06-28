@@ -29,7 +29,8 @@ const StyledTitleProject = styled.h4`
 const StyledAuthor = styled.h3`
   font-size: 1.5rem;
   margin: 10px 25px 0 0;
-  @media ${device.mobileS} and (orientation: landscape) {
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
     margin: 10px 0 0 25px;
   }
   ${({ color }) => (color === 'Razem' ? 'color: blue' : 'color: yellow')}
@@ -40,7 +41,8 @@ const StyledTitle = styled.section`
   align-items: center;
   justify-content: space-between;
 
-  @media ${device.mobileS} and (orientation: landscape) {
+  @media ${device.mobileS} and (orientation: landscape),
+    ${device.tablet} and (orientation: portrait) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -84,8 +86,7 @@ class Project extends React.Component {
     const { ref } = this
     if (ref.current !== undefined && ref.current !== null) {
       const off = ref.current.offsetTop
-      const height = ref.current.offsetHeight
-      if (off < scrollV + window.innerHeight - height / 9) {
+      if (off < scrollV + window.innerHeight - 20) {
         this.setState({
           active: true,
         })

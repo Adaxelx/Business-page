@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import device from '../templates/MediaWidth'
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');  *, *::before, *::after {
@@ -15,6 +16,22 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-size: 1.6rem;
+  }
+
+  @media ${device.tablet} and (orientation: portrait){
+    html{
+      font-size: 100%
+    }
+  }
+  @media ${device.laptop} and (orientation: portrait){
+    html{
+      font-size: 125%
+    }
+  }
+  @media ${device.laptopL} and (orientation: portrait){
+    html{
+      font-size: 250%
+    }
   }
 `
 
