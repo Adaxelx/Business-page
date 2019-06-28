@@ -11,9 +11,9 @@ const StyledAboutPage = styled.div`
   width: 100%;
 
   text-align: center;
-  background-color: rgb(194, 194, 206);
+  background-color: ${({ theme }) => theme.grey};
 
-  padding: 40px 15px;
+  padding: ${({ theme }) => theme.padding};
 `
 
 const AboutPage = () => (

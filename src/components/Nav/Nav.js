@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 const StyledNav = styled.nav`
   height: 40px;
   width: 100%;
-  background-color: #e09100;
+  background-color: ${({ theme }) => theme.orange};
   color: white;
   position: fixed;
   top: 0;
@@ -19,21 +19,24 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
   color: white;
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   text-decoration: none;
+  text-align: center;
+  width: 100px;
 `
 
-const StyledH1 = styled(StyledLink)`
-  font-size: 3rem;
+const StyledLogo = styled(StyledLink)`
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-weight: 700;
 `
 
 const Nav = ({ index }) => (
   <StyledNav>
-    <StyledH1 to="/">Haku</StyledH1>
+    <StyledLogo to="/">Haku</StyledLogo>
     {index ? (
       <StyledLink to="/projects/">Portfolio</StyledLink>
     ) : (
-      <StyledLink to="/">Index</StyledLink>
+      <StyledLink to="/">Home</StyledLink>
     )}
   </StyledNav>
 )

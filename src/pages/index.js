@@ -9,7 +9,7 @@ import ContactPage from '../templates/ContactPage'
 
 const IndexPage = () => (
   <>
-    <Layout index>
+    <Layout index={1}>
       <StartPage />
       <OfferPage />
       <AboutPage />

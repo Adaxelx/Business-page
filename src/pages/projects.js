@@ -17,7 +17,7 @@ import witcher from '../images/witcher.png'
 
 const StyledProjects = styled.article`
   margin-top: 40px;
-  background-color: rgb(194, 194, 206);
+  background-color: ${({ theme }) => theme.grey};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -54,7 +54,7 @@ const StyledGit = styled.section`
 `
 
 const StyledButton = styled.a`
-  background-color: rgb(194, 194, 206);
+  background-color: ${({ theme }) => theme.grey};
   border: 1px solid black;
   margin: 10px 0 10px 0;
   width: 50px;
@@ -133,7 +133,7 @@ const Projects = () => {
     />
   ))
   return (
-    <Layout>
+    <Layout index={0}>
       <StyledProjects>
         <H2>Nasze projekty</H2>
         <Logo src={img} alt="" />
