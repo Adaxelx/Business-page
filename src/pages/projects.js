@@ -4,7 +4,7 @@ import device from '../templates/MediaWidth'
 import P from '../components/Paragraph/P'
 import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import Project from '../components/Project'
 import Logo from '../components/Logo'
 

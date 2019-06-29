@@ -18,7 +18,6 @@ const StyledCon = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     flex-direction: row;
     justify-content: center;
