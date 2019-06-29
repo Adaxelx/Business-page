@@ -21,7 +21,7 @@ const StyledOfferPage = styled.div`
   }
 
   @media ${({ theme }) => theme.device.laptop} {
-    padding: 40px 200px;
+    padding: 60px 200px;
   }
 `
 

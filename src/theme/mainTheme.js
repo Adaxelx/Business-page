@@ -14,11 +14,11 @@ export const theme = {
     xxl: '4rem',
   },
   device: {
-    mobileS: `(min-width: 320px)`,
-    mobileM: `(min-width: 460px)`,
-    tablet: `(min-width: 768px)`,
-    laptop: `(min-width: 1024px)`,
-    laptopL: `(min-width: 1280px)`,
-    desktop: `(min-width: 1600px)`,
+    mobileS: '(min-width: 320px)',
+    mobileM: '(min-width: 460px)',
+    tablet: '(min-width: 768px)',
+    laptop: '(min-width: 1024px)',
+    laptopL: '(min-width: 1280px)',
+    desktop: '(min-width: 1600px)',
   },
 }

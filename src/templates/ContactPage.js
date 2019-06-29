@@ -6,7 +6,7 @@ import H2 from '../components/headers/H2'
 const StyledContactPage = styled.div`
   width: 100%;
 
-  padding: ${({ theme }) => theme.padding};
+  padding: 20px;
 
   background-color: ${({ theme }) => theme.yellow};
 
@@ -14,25 +14,38 @@ const StyledContactPage = styled.div`
 `
 
 const StyledForm = styled.form`
+  width: 250px;
+  font-size: ${({ theme }) => theme.fontSize.m};
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: ${({ theme }) => theme.fontSize.m};
 
-  @media ${({ theme }) => theme.device.moblieS} {
+   /* @media ${({ theme }) => theme.device.moblieS} {
+         background-color: #000;
     width: 250px;
-    font-size: ${({ theme }) => theme.fontSize.l};
+    font-size: ${({ theme }) => theme.fontSize.m};
   }
+
   @media ${({ theme }) => theme.device.moblieM} {
+    background-color: #fff;
+    font-size: ${({ theme }) => theme.fontSize.m};
+  } */
+
+
+  @media (min-width: 460px) {
     width: 350px;
     font-size: ${({ theme }) => theme.fontSize.l};
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    width: 550px;
+    font-size: ${({ theme }) => theme.fontSize.xl};
   }
 `
 
 const StyledInput = styled.input`
   background-color: white;
   width: 100%;
-  height: 40px;
   border: none;
   text-align: center;
   padding: 2px;
@@ -40,14 +53,22 @@ const StyledInput = styled.input`
   /* border: black solid 2px; */
   border-radius: 50px;
 
+  @media ${({ theme }) => theme.device.moblieS} {
+    height: 40px;
+  }
+
   @media ${({ theme }) => theme.device.moblieM} {
     height: 50px;
+  }
+
+  @media ${({ theme }) => theme.device.tablet} {
+    /* height: 60px; */
   }
 `
 
 const StyledTextArea = styled.textarea`
   background-color: white;
-  width: 250px;
+  width: 100%;
   height: 250px;
   border: none;
   text-align: center;
@@ -88,12 +109,19 @@ const StyledMap = styled.iframe`
     width: 60%;
     height: 400px;
   }
+  @media ${({ theme }) => theme.device.laptop} {
+    height: 450px;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
 `
 
 const StyledContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   @media ${({ theme }) => theme.device.laptop} {
     flex-direction: row;
   }
