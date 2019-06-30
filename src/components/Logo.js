@@ -27,7 +27,7 @@ class Logo extends React.Component {
     if (ref.current !== undefined && ref.current !== null) {
       const off = ref.current.getBoundingClientRect().top
       const height = ref.current.offsetHeight
-      if (off < window.innerHeight - height / 4) {
+      if (off < window.innerHeight - height / 2) {
         this.setState({
           active: true,
         })

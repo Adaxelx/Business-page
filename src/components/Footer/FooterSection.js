@@ -7,8 +7,7 @@ import H3 from '../headers/H3'
 const StyledSection = styled.section`
   margin-bottom: 30px;
   position: relative;
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     max-width: 30%;
   }
 `

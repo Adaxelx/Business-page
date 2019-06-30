@@ -41,8 +41,7 @@ const StyledDescription = styled.p`
   margin-top: ${({ theme }) => theme.margin};
   width: 90%;
 
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     width: 40%;
     margin-top: 0;
     align-self: center;
@@ -55,8 +54,7 @@ const StyledSection = styled.section`
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.yellow};
 
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     width: 40%;
   }
 `
@@ -87,8 +85,7 @@ const StyledConSec = styled.section`
   align-items: center;
   width: 100%;
 
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -149,16 +146,7 @@ const Projects = () => {
     },
   ]
 
-  const projectArr = projectsData.map(project => (
-    <Project
-      key={project.key}
-      title={project.title}
-      author={project.author}
-      img={project.img}
-      content={project.content}
-      link={project.link}
-    />
-  ))
+  const projectArr = projectsData.map(project => <Project key={project.key} title={project.title} author={project.author} img={project.img} content={project.content} link={project.link} />)
   return (
     <Layout index={0}>
       <StyledProjects>
@@ -168,9 +156,8 @@ const Projects = () => {
             <Logo src={img} alt="" />
           </StyledLogoCon>
           <StyledDescription>
-            Jest to zbiór naszych wspólnych jak i samodzielnych projektów. Przedstawione tutaj
-            projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak
-            postaraliśmy się wybrać te najbardziej interesujące.
+            Jest to zbiór naszych wspólnych jak i samodzielnych projektów. Przedstawione tutaj projekty nie są wszystkimi projektami naszej firmy jak i jej pracowników, jednak postaraliśmy się wybrać
+            te najbardziej interesujące.
           </StyledDescription>
         </StyledConSec>
         <StyledConSec>

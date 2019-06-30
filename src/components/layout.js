@@ -25,7 +25,7 @@ const Layout = ({ children, index }) => (
 
 Layout.propTypes = {
   index: PropTypes.number,
-  children: PropTypes.arrayOf(PropTypes.object).isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 }
 
 Layout.defaultProps = {

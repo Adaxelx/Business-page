@@ -4,8 +4,7 @@ import device from '../../templates/MediaWidth'
 const P = styled.p`
   text-align: justify;
   font-size: ${({ theme }) => theme.fontSize.s};
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     margin-left: 30px;
   }
 `

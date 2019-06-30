@@ -19,8 +19,7 @@ const StyledCon = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     margin-top: 10px;
     flex-direction: row;
     justify-content: center;
@@ -30,8 +29,7 @@ const StyledCon = styled.section`
 
 const StyledContent = styled.section`
   width: 90%;
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     width: 50%;
   }
 `
@@ -45,12 +43,9 @@ const AboutPage = () => (
         <StyledContent>
           <H3>Who are we?</H3>
           <P>
-            Cupidatat consectetur pariatur voluptate esse aliquip exercitation deserunt non et
-            laborum tempor ullamco. Officia proident ipsum occaecat non. Dolore sunt do consectetur
-            laboris amet amet aliqua sunt id nostrud. Anim qui magna est excepteur. Dolor eiusmod
-            fugiat veniam enim reprehenderit do minim sint officia officia non eu laboris. Mollit
-            tempor labore adipisicing anim velit ut aliqua reprehenderit nostrud. Tempor magna
-            adipisicing velit consectetur aute proident sunt culpa ex aliqua.
+            Cupidatat consectetur pariatur voluptate esse aliquip exercitation deserunt non et laborum tempor ullamco. Officia proident ipsum occaecat non. Dolore sunt do consectetur laboris amet amet
+            aliqua sunt id nostrud. Anim qui magna est excepteur. Dolor eiusmod fugiat veniam enim reprehenderit do minim sint officia officia non eu laboris. Mollit tempor labore adipisicing anim
+            velit ut aliqua reprehenderit nostrud. Tempor magna adipisicing velit consectetur aute proident sunt culpa ex aliqua.
           </P>
         </StyledContent>
       </StyledCon>
