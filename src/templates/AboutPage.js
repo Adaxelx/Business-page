@@ -21,6 +21,7 @@ const StyledCon = styled.section`
 
   @media ${device.mobileS} and (orientation: landscape),
     ${device.tablet} and (orientation: portrait) {
+    margin-top: 10px;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import device from '../templates/MediaWidth'
-import P from '../components/Paragraph/P'
 import H2 from '../components/headers/H2'
 import H3 from '../components/headers/H3'
 import Layout from '../components/layout'
@@ -178,7 +177,7 @@ const Projects = () => {
           {projectArr}
           <StyledSection>
             <H3>Github</H3>
-            <P>Resztę naszych projektów mozna obejrzeć na naszych githubach:</P>
+            <p>Resztę naszych projektów mozna obejrzeć na naszych githubach:</p>
             <StyledGitSec>
               <StyledGit>
                 <StyledH5>Adrian Gklasdfgh</StyledH5>
