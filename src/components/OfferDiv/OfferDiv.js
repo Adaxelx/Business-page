@@ -38,7 +38,7 @@ class OfferDiv extends React.Component {
     if (ref.current !== undefined && ref.current !== null) {
       const off = ref.current.offsetTop
       const height = ref.current.offsetHeight
-      if (off < scrollV + window.innerHeight - height / 4) {
+      if (off < scrollV + window.innerHeight - height / 2) {
         this.setState({
           active: true,
         })

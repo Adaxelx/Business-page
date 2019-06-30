@@ -38,11 +38,7 @@ const StyledLogo = styled(StyledLink)`
 const Nav = ({ index }) => (
   <StyledNav>
     <StyledLogo to="/">Haku</StyledLogo>
-    {index ? (
-      <StyledLink to="/projects/">Portfolio</StyledLink>
-    ) : (
-      <StyledLink to="/">Home</StyledLink>
-    )}
+    {index ? <StyledLink to="/projects/">Portfolio</StyledLink> : <StyledLink to="/">Home</StyledLink>}
   </StyledNav>
 )
 

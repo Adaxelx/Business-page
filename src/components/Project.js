@@ -11,12 +11,9 @@ const StyledProject = styled.section`
   flex-direction: column;
   align-items: center;
   transition: 0.5s;
-  ${({ active }) =>
-    active ? 'transform: translateY(0%); opacity: 1;' : 'transform: translateY(100%); opacity:0;'}
-  
-  @media ${device.mobileS} and (orientation: landscape), ${
-  device.tablet
-} and (orientation: portrait){
+  ${({ active }) => (active ? 'transform: translateY(0%); opacity: 1;' : 'transform: translateY(100%); opacity:0;')};
+
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     width: 40%;
   }
 `
@@ -29,20 +26,19 @@ const StyledTitleProject = styled.h4`
 const StyledAuthor = styled.h3`
   font-size: 1.5rem;
   margin: 10px 25px 0 0;
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     margin: 10px 0 0 25px;
   }
-  ${({ color }) => (color === 'Razem' ? 'color: blue' : 'color: yellow')}
+  ${({ color }) => (color === 'Razem' ? 'color: blue' : 'color: yellow')};
 `
+
 const StyledTitle = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @media ${device.mobileS} and (orientation: landscape),
-    ${device.tablet} and (orientation: portrait) {
+  @media ${device.mobileS} and (orientation: landscape), ${device.tablet} and (orientation: portrait) {
     flex-direction: column;
     align-items: flex-start;
   }
